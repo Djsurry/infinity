@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: infinity
+Version: 0.1
+Summary: Infinity for use when comparing ints and floats
+Home-page: http://github.com/Djsurry/infinity
+Author: David Surry
+Author-email: djsurry@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Description: # infinity
+        
+        ## Allows for easy use of infinity when using python
+        
+        > Every wanted to define a variable and then check if its smaller than something, setting it on the first one no matter what? I have and I have always just used something like -1, but that seems crude
+        
+        ## Usage
+        
+        ```python
+        from infinity import Infinity
+        inf = Infinity()
+        print(inf > 9999999999999999) # True
+        print(inf < Infinity()) # False
+        print(inf >= Infinity()) # True
+        
+        neg_inf = Infinity(negative=True)
+        print(inf < -9999999999999999) # True
+        print(inf < Infinity()) # True
+        print(inf >= Infinity(negative=True)) # True
+        ```
+        `Infinity` takes in one kwarg, `negative` which defaults to `False`. This indicates weather it should represent negative infinity or positive infinity
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
